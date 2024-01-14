@@ -1,8 +1,8 @@
-export function Square(){
+function Square(){
     return (
-    <div>
-        <Simbolo/>
-    </div>
+    <button className="square">
+        Square
+    </button>
     )
 
 }

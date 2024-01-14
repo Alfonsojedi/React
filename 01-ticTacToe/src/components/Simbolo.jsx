@@ -1,4 +1,4 @@
-export function Simbolo(state){
+function Simbolo(state){
     //State es un Number que guarda el estado de la celda
     if (state==0){
         return <h1>+</h1>
