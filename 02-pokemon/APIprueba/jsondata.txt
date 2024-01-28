@@ -1,0 +1,16 @@
+abilities: array con nombre y un url
+base_experience: int o NULL
+forms: array con la evolución concreta del pokémon y su url
+game_indices: array con las versiones (generaciones?) del pokémon
+height: altura
+held_items: array de items que lleva (0 items mostly).
+id: numero del pokemon
+is_default: booleano (idk what is for)
+location_area_encounters: url donde lo encuentras en el juego
+moves: array con todos los movimientos que puede aprender y su url
+species: array que guarda el nombre y el url del pokemon
+sprites: array con imagenes png del pokemon (+shiny)
+versions: diccionario con todos los sprites de cada generación
+stats: las 6 stats primarias de los pokemon
+types: array con los tipos del pokémon (fuego,agua...)
+weight:peso del pokémon
