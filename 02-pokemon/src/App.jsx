@@ -1,31 +1,18 @@
 import { useState } from 'react'
-import './App.css'
 import './index.css'
+import PokeNav from './components/PokeNav'
+import Reacting from './components/Reacting'
+import PokeCard from './components/PokeCard'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <PokeNav/>
-      <div className="card">
-        <div class="card-header">
-          <div className='row'>
-            <div className='col type fire'>
-              Fire
-            </div>
-            <div className='col type flying'>
-              Flying
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Charizard</h5>
-          <p class="card-text">Pokemon que tiene una descripción pero me da pereza</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-
-      </div>
+    <Reacting></Reacting>
+      <main>
+        <PokeCard></PokeCard>
+      </main>
     </>
   )
 }
