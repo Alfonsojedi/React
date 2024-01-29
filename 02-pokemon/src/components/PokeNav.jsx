@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function PokeNav(){
+export function PokeNav(){
 
   return(
     <nav class="navbar navbar-expand-lg bg-body-tertiary">

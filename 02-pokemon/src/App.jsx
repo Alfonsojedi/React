@@ -3,15 +3,16 @@ import './index.css'
 import PokeNav from './components/PokeNav'
 import Reacting from './components/Reacting'
 import PokeCard from './components/PokeCard'
+import CardGrid from './components/CardGrid'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <Reacting></Reacting>
+    <PokeNav></PokeNav>
       <main>
-        <PokeCard></PokeCard>
+        <CardGrid></CardGrid>
       </main>
     </>
   )
