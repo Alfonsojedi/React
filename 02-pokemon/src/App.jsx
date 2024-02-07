@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-    <PokeNav></PokeNav>
+      <PokeNav></PokeNav>
       <main>
         <CardGrid></CardGrid>
       </main>

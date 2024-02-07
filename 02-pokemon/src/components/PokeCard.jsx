@@ -1,7 +1,33 @@
 import { useState } from 'react'
 
 export function PokeCard(){
-
+  const pokemon = {
+    name: "Charizard",
+    hp: "80",
+    atk: "110",
+    dfs: "70",
+    spatk: "100",
+    spdfs: "65",
+    spd: "105"
+  }
+  const styleHP = {
+    width: eval(100*pokemon.hp/255)+"%"
+  }
+  const styleAtk = {
+    width: eval(100*pokemon.atk/255)+"%"
+  }
+  const styleDfs = {
+    width: eval(100*pokemon.dfs/255)+"%"
+  }
+  const styleSpAtk = {
+    width: eval(100*pokemon.spatk/255)+"%"
+  }
+  const styleSpDfs = {
+    width: eval(100*pokemon.spdfs/255)+"%"
+  }
+  const styleSpd = {
+    width: eval(100*pokemon.spd/255)+"%"
+  }
   return(
     <div className='col-4 p-2'>
         <div className="card">
@@ -16,9 +42,58 @@ export function PokeCard(){
             </div>
             </div>
             <div class="card-main">
-            <h5 class="card-title">Nº6 Charizard</h5>
-            <p class="card-text">Charizards are orange dragon-like Pokémon that have two wings, that are blue on the front, and orange on the back. Its belly and soles are cream-colored, while their eyes are light blue. The video games say that Charizard's wings can bring it to 4,600 feet in the sky.</p>
-            <a href="#" class="btn btn-primary">See Charizard</a>
+            <h5 class="card-title">{pokemon.name}</h5>
+            <div className='p-1'>
+                <div class="row">
+                    <div class="col-3">Hp</div>
+                    <div class="col-9">
+                        <div class="progress" role="progressbar" aria-label="HP" aria-valuenow="100" aria-valuemin="0" aria-valuemax="255">
+                            <div className='progress-bar fairy' style={styleHP}>{pokemon.hp}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Atk</div>
+                    <div class="col-9">
+                        <div class="progress" role="progressbar" aria-label="HP" aria-valuenow="100" aria-valuemin="0" aria-valuemax="255">
+                            <div className='progress-bar fire' style={styleAtk}>{pokemon.atk}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Dfs</div>
+                    <div class="col-9">
+                        <div class="progress" role="progressbar" aria-label="HP" aria-valuenow="100" aria-valuemin="0" aria-valuemax="255">
+                            <div className='progress-bar flying' style={styleDfs}>{pokemon.dfs}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">SpAtk</div>
+                    <div class="col-9">
+                        <div class="progress" role="progressbar" aria-label="HP" aria-valuenow="100" aria-valuemin="0" aria-valuemax="255">
+                            <div className='progress-bar fighting' style={styleSpAtk}>{pokemon.spatk}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">SpDfs</div>
+                    <div class="col-9">
+                        <div class="progress" role="progressbar" aria-label="HP" aria-valuenow="100" aria-valuemin="0" aria-valuemax="255">
+                            <div className='progress-bar water' style={styleSpDfs}>{pokemon.spdfs}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Spd</div>
+                    <div class="col-9">
+                        <div class="progress" role="progressbar" aria-label="HP" aria-valuenow="100" aria-valuemin="0" aria-valuemax="255">
+                            <div className='progress-bar bug' style={styleSpd}>{pokemon.spd}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn btn-primary">See {pokemon.name}</a>
             </div>
 
         </div>
