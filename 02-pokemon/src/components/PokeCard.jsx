@@ -1,16 +1,8 @@
 import { useState } from 'react'
 import ProgressBar from './ProgressBar'
 
-export function PokeCard(){
-  const pokemon = {
-    name: "Charizard",
-    hp: "80",
-    atk: "110",
-    dfs: "70",
-    spatk: "100",
-    spdfs: "65",
-    spd: "105"
-  }
+export function PokeCard({pokemon}){
+  
   return(
     <div className='col-4 p-2'>
         <div className="card">

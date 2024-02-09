@@ -65,7 +65,10 @@ body {
 .water{
   background-color: #0088FF;
 }
-.mini{
-  font-size: x-small;
+.ministat{
+  font-size: 1.5vw;
   text-align: right;
+}
+.align{
+  align-items: center;
 }
