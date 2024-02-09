@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import ProgressBar from './ProgressBar'
+import Type from './Type'
 
 export function PokeCard({pokemon}){
   
@@ -8,12 +9,8 @@ export function PokeCard({pokemon}){
         <div className="card">
             <div className='card-header'>
             <div className='row'>
-                <div className='col type fire'>
-                    Fire
-                </div>
-                <div className='col type flying'>
-                    Flying
-                </div>
+              <Type type="fire"></Type>
+                <Type type="flying"></Type>
             </div>
             </div>
             <div className='card-main'>
