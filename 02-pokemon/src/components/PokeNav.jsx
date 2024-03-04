@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import NavItem from './NavItem'
 
 export function PokeNav(){
 
@@ -10,30 +11,15 @@ export function PokeNav(){
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Kanto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Johto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Hoenn</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sinnoh</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Unova</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Alola</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Galar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Paldea</a>
-            </li>
+            <NavItem region={"Kanto"}></NavItem>
+            <NavItem region={"Johto"}></NavItem>
+            <NavItem region={"Hoenn"}></NavItem>
+            <NavItem region={"Sinnoh"}></NavItem>
+            <NavItem region={"Unova"}></NavItem>
+            <NavItem region={"Kalos"}></NavItem>
+            <NavItem region={"Alola"}></NavItem>
+            <NavItem region={"Galar"}></NavItem>
+            <NavItem region={"Paldea"}></NavItem>
           </ul>
         </div>
       </div>
