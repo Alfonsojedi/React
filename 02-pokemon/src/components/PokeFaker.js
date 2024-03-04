@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 export function PokeFaker(){
     const pokemon =
     {
@@ -12659,11 +12657,7 @@ export function PokeFaker(){
     ],
     "weight": 69
     }
-    console.log(pokemon.forms)
-    return(
-        <>
-        </>
-    )
+    return pokemon
 }
 
 export default PokeFaker

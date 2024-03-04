@@ -5,6 +5,7 @@ import Reacting from './components/Reacting'
 import PokeCard from './components/PokeCard'
 import CardGrid from './components/CardGrid'
 import PokeFaker from './components/PokeFaker'
+import PokeFull from './components/PokeFull'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +24,7 @@ function App() {
     <>
       <PokeNav></PokeNav>
       <main>
+        <PokeFull pokemon={PokeFaker()}></PokeFull>
         <CardGrid></CardGrid>
         <CardGrid></CardGrid>
       </main>

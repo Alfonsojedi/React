@@ -14,68 +14,116 @@ body {
 .bug{
   background-color: #88CC00;
 }
+.bugcard{
+  background-color: #CCFF00;
+}
 .dark{
   background-color: #444444;
   color:#FFF;
+}
+.darkcard{
+  background-color: #999999;
 }
 .dragon{
   background-color: #444488;
   color:#FFF;
 }
+.dragoncard{
+  background-color: #8888FF;
+}
 .electric{
   background-color: #FFFF00;
 }
+.electriccard{
+  background-color: #FFFF88;
+}
 .fairy{
   background-color: #FF88CC;
+}
+.fairycard{
+  background-color: #FFCCFF;
 }
 .fighting{
   background-color: #CC4400;
   color:#FFF;
 }
+.fightingcard{
+  background-color: #FF8866;
+}
 .fire{
   background-color: #FF8800;
 }
 .firecard{
-  background-color: #FFBB66;
+  background-color: #FFCC66;
 }
 .flying{
   background-color: #44CCFF;
 }
 .flyingcard{
-  background-color: #AAEEFF;
+  background-color: #CCEEFF;
 }
 .ghost{
   background-color: #440088;
   color:#FFF;
 }
+.ghostcard{
+  background-color: #8844CC;
+}
 .grass{
   background-color: #44FF00;
+}
+.grasscard{
+  background-color:#CCFF88;
 }
 .ground{
   background-color: #444400;
   color:#FFF;
 }
+.groundcard{
+  background-color: #888844;
+}
 .ice{
   background-color: #00FFFF;
+}
+.icecard{
+  background-color: #88FFFF;
 }
 .normal{
   background-color: #CCCCCC;
 }
+.normalcard{
+  background-color: #FFFFFF;
+}
 .poison{
   background-color: #8800FF;
 }
+.poisoncard{
+  background-color: #CC88FF;
+}
 .psychic{
   background-color: #CC0088;
+}
+.psychiccard{
+  background-color: #EE44CC;
 }
 .rock{
   background-color: #884400;
   color:#FFF;
 }
+.rockcard{
+  background-color: #CC8844;
+}
 .steel{
   background-color: #888888;
 }
+.steelcard{
+  background-color: #DDDDDD;
+}
 .water{
   background-color: #0088FF;
+}
+.watercard{
+  background-color: #44CCFF;
 }
 .ministat{
   font-size: 1.5vw;
