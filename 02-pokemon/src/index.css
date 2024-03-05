@@ -138,3 +138,10 @@ body {
 .center{
   justify-content: center;
 }
+.radius{
+  border: #00FFFF 1px solid;
+  border-radius: 1.5em;
+}
+.kindatrans{
+  color: #333A;
+}

@@ -23,7 +23,6 @@ export function PokeCard({pokemon}){
             <ProgressBar amount={pokemon.spdfs} stat={"SpDfs"}></ProgressBar>
             <ProgressBar amount={pokemon.spd} stat={"Spd"}></ProgressBar>
           </div>
-              <a href="#" class="btn btn-primary ms-2 mb-2">See {pokemon.name}</a>
         </div>
       </div>
     </div>
