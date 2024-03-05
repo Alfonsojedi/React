@@ -40,7 +40,7 @@ export function PokeFull({pokemon}){
                 <div className='card'>
                     <div className="card-header bg-danger">
                         <div className="row mt-1">
-                            <div className="col-6">
+                            <div className="col-5">
                                 <div className="icecard radius aling center p-1">
                                 <img className='w-100' src={pokemon.sprites.front_default}></img>
                                 <div className='row'>
@@ -50,7 +50,7 @@ export function PokeFull({pokemon}){
                                 </div>
                             </div>
                         </div>
-                        <div className="col-6">
+                        <div className="col-7">
                             <div className={"radius p-1 "+color1+"card"}>
                             <p>Altura: <span className="kindatrans">{pokemon.height/10}</span>m</p>
                             <p>Peso: <span className="kindatrans">{pokemon.weight/10}</span>kg</p>
@@ -68,6 +68,9 @@ export function PokeFull({pokemon}){
                                 {skill2 ?
                                 <li>{pokemon.abilities[2]["ability"]["name"]}</li>:<></>}
                             </ol>
+                            <p>Cadena evolutiva:</p>
+                            <p className="kindatrans">Bulvasaur||Ivysaur||Venosaur</p>
+                            <p className="kindatrans">Bulvasaur||Snorlax</p>
                             <p>Zona de captura:</p>
                             <p className="kindatrans">{pokemon.location_area_encounters}</p>
                             </div>
@@ -78,15 +81,15 @@ export function PokeFull({pokemon}){
                         <h5 className='card-title'>Nº{pokeid}: {pokemon.species.name.toUpperCase()}</h5>
                         <div className="row ps-3">
                             <div className={"border radius "+color2+"card p-1 col-9 col-md-10"}>
-                                <p>Descripción del pokémon</p>
-                                <p>¿Cadena evolutiva?</p>
-                                <p>¿Lista de movimientos del pokemon?</p>
+                                <p>Descripción:</p>
+                                <p>Lista de movimientos:</p>
+                                <p>Pound | level:1 | type:normal</p>
                             </div>
                             <div className="col-3 col-md-2">
                                 <p>+</p>
                                 <p>-</p>
                                 <p className="kindatrans">Alfj</p>
-                                <p>: :</p>
+                                <p>: : :</p>
                             </div>
                         </div>
                     </div>
