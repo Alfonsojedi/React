@@ -40,7 +40,7 @@ export function PokeFull({pokemon}){
     }
     return(
         <div className='row m-2 aling center'>
-            <div className='col-10 col-md-9'>
+            <div className='col-11'>
                 <div className='card'>
                     <div className="card-header bg-danger">
                         <div className="row mt-1">
@@ -60,6 +60,7 @@ export function PokeFull({pokemon}){
                             </div>
                             <div className="col-7">
                                 <div className={"radius p-1 "+color1+"card"}>
+                                <h4>{pokemon.species.name.toUpperCase()}</h4>
                                 <h6>Habilidades:</h6>
                                 <ol>
                                     <li>{pokemon.abilities[0]["ability"]["name"]}</li>
@@ -91,8 +92,11 @@ export function PokeFull({pokemon}){
                         <div className="row ps-3">
                             <div className={"radius "+color2+"card p-1 col-9 col-md-10"}>
                                 <p>Descripción:</p>
+                                <p className="kindatrans p-1">{pokemon.name.toUpperCase()} should have a description here; sadly, I don't know where it's description is so don't expect this to work for now...</p>
                                 <p>Lista de movimientos:</p>
-                                <p>Pound | level:1 | type:normal</p>
+                                <ul>
+                                    <li>{pokemon.moves[0]["move"]["name"]+" | level: "+pokemon.moves[0]["version_group_details"][0]["level_learned_at"]+" | obtainable: "+pokemon.moves[0]["version_group_details"][0]["move_learn_method"]["name"]}</li>
+                                </ul>
 
                             </div>
                             <div className="col-3 col-md-2">
@@ -103,8 +107,11 @@ export function PokeFull({pokemon}){
                             </div>
                         </div>
                         <div className="row aling right">
-                            <div className="col-8">
-                                <audio controls className="bg-danger w-75">
+                            <div className="col-3 right">
+                                <h1><b>▒▒</b></h1>      
+                            </div>
+                            <div className="col-5">
+                                <audio controls className="bg-danger w-75 mt-1 radius border">
                                     <source src={pokemon.cries.latest} type="audio/ogg"></source>
                                     Pokemon noises.
                                 </audio>

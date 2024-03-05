@@ -55,7 +55,7 @@ try{
           </div>
         </div>
         <div className={"card-main "+color2+"card"}>
-          <h5 className='card-title ps-1 pt-1'>{pokemon.name}</h5>
+          <h5 className='card-title ps-1 pt-1'>{pokemon.name.toUpperCase()}:</h5>
           <div className='p-1'>
             <ProgressBar amount={pokemon.stats[0]["base_stat"]} stat={"HP"}></ProgressBar>
             <ProgressBar amount={pokemon.stats[1]["base_stat"]} stat={"Atk"}></ProgressBar>
