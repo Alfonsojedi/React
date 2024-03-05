@@ -37,7 +37,7 @@ export function PokeFull({pokemon}){
     return(
         <div className='row m-2 aling center'>
             <div className='col-10 col-md-9'>
-                <div className='card'>
+                <div className='card bg-danger p-4'>
                     <div className={"card-header "+color1+"card"}>
                         <div className="row mt-1">
                             <div className="col-6 icecard radius aling center">
@@ -52,11 +52,11 @@ export function PokeFull({pokemon}){
                             <p>Altura: <span className="kindatrans">{pokemon.height/10}</span>m</p>
                             <p>Peso: <span className="kindatrans">{pokemon.weight/10}</span>kg</p>
                             <ProgressBar amount={pokemon.stats[0]["base_stat"]} stat={"HP"}></ProgressBar>
-                        <ProgressBar amount={pokemon.stats[1]["base_stat"]} stat={"Atk"}></ProgressBar>
-                        <ProgressBar amount={pokemon.stats[2]["base_stat"]} stat={"Dfs"}></ProgressBar>
-                        <ProgressBar amount={pokemon.stats[3]["base_stat"]} stat={"SpAtk"}></ProgressBar>
-                        <ProgressBar amount={pokemon.stats[4]["base_stat"]} stat={"SpDfs"}></ProgressBar>
-                        <ProgressBar amount={pokemon.stats[5]["base_stat"]} stat={"Spd"}></ProgressBar>
+                            <ProgressBar amount={pokemon.stats[1]["base_stat"]} stat={"Atk"}></ProgressBar>
+                            <ProgressBar amount={pokemon.stats[2]["base_stat"]} stat={"Dfs"}></ProgressBar>
+                            <ProgressBar amount={pokemon.stats[3]["base_stat"]} stat={"SpAtk"}></ProgressBar>
+                            <ProgressBar amount={pokemon.stats[4]["base_stat"]} stat={"SpDfs"}></ProgressBar>
+                            <ProgressBar amount={pokemon.stats[5]["base_stat"]} stat={"Spd"}></ProgressBar>
                             <p>Habilidades:</p>
                             <ol>
                                 <li>{pokemon.abilities[0]["ability"]["name"]}</li>
