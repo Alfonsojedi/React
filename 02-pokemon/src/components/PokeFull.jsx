@@ -37,8 +37,8 @@ export function PokeFull({pokemon}){
     return(
         <div className='row m-2 aling center'>
             <div className='col-10 col-md-9'>
-                <div className='card bg-danger p-4'>
-                    <div className={"card-header "+color1+"card"}>
+                <div className='card'>
+                    <div className="card-header bg-danger">
                         <div className="row mt-1">
                             <div className="col-6 icecard radius aling center">
                                 <img className='w-100' src={pokemon.sprites.front_default}></img>
@@ -49,6 +49,7 @@ export function PokeFull({pokemon}){
                             </div>
                         </div>
                         <div className="col-6">
+                            <div className={"radius p-1 "+color1+"card"}>
                             <p>Altura: <span className="kindatrans">{pokemon.height/10}</span>m</p>
                             <p>Peso: <span className="kindatrans">{pokemon.weight/10}</span>kg</p>
                             <ProgressBar amount={pokemon.stats[0]["base_stat"]} stat={"HP"}></ProgressBar>
@@ -67,6 +68,7 @@ export function PokeFull({pokemon}){
                             </ol>
                             <p>Zona de captura:</p>
                             <p>¿Cadena evolutiva?</p>
+                            </div>
                         </div>
                     </div>
                     </div>
