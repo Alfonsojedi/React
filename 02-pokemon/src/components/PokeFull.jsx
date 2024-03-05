@@ -93,12 +93,24 @@ export function PokeFull({pokemon}){
                                 <p>Descripción:</p>
                                 <p>Lista de movimientos:</p>
                                 <p>Pound | level:1 | type:normal</p>
+
                             </div>
                             <div className="col-3 col-md-2">
-                                <p>+</p>
-                                <p>-</p>
-                                <p className="kindatrans">Alfj</p>
-                                <p>: : :</p>
+                                <h6 className="red"><span className="minib">+ </span> start</h6>
+                                <h6 className="red"><span className="minib">─</span> select</h6>
+                                <p className="kindatrans">Alf's</p>
+                                <p>4DS</p>
+                            </div>
+                        </div>
+                        <div className="row aling right">
+                            <div className="col-8">
+                                <audio controls className="bg-danger w-75">
+                                    <source src={pokemon.cries.latest} type="audio/ogg"></source>
+                                    Pokemon noises.
+                                </audio>
+                            </div>
+                            <div className="col-3">
+                                <h1><b>▒▒</b></h1>      
                             </div>
                         </div>
                     </div>

@@ -135,8 +135,14 @@ body {
 .align{
   align-items: center;
 }
+.bold{
+  font-weight: bolder;
+}
 .center{
   justify-content: center;
+}
+.right{
+  justify-content: right;
 }
 .radius{
   border: #00FFFF 1px solid;
@@ -147,4 +153,17 @@ body {
 }
 .scarlet{
   background-color: #FDC;
+}
+.white{
+  color: #FFF;
+}
+.minib{
+  border: #888888 1px solid;
+  border-radius: 1em;
+  background-color: #CCCCCC;
+  font-size: larger;
+  color: #666;
+}
+.red{
+  color:#8218
 }
