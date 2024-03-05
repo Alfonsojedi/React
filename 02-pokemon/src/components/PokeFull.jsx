@@ -69,6 +69,7 @@ export function PokeFull({pokemon}){
                                 <li>{pokemon.abilities[2]["ability"]["name"]}</li>:<></>}
                             </ol>
                             <p>Zona de captura:</p>
+                            <p className="kindatrans">{pokemon.location_area_encounters}</p>
                             </div>
                         </div>
                     </div>
