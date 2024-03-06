@@ -135,6 +135,9 @@ body {
 .align{
   align-items: center;
 }
+.aligntext{
+  text-align: center;
+}
 .bold{
   font-weight: bolder;
 }
@@ -145,7 +148,7 @@ body {
   justify-content: right;
 }
 .radius{
-  border: #00FFFF 1px solid;
+  border: #44CCFF 1px solid;
   border-radius: 1.5em;
 }
 .kindatrans{
@@ -157,6 +160,9 @@ body {
 .white{
   color: #FFF;
 }
+.grey{
+  color: #DDD;
+}
 .minib{
   border: #888888 1px solid;
   border-radius: 1em;
@@ -166,4 +172,8 @@ body {
 }
 .red{
   color:#8218
+}
+.blue{
+  color:#00CCFF;
+  font-size: xx-large;
 }

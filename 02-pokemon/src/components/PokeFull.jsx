@@ -45,7 +45,7 @@ export function PokeFull({pokemon}){
                     <div className="card-header bg-danger">
                         <div className="row mt-1">
                             <div className="col-5">
-                                <div className="icecard radius aling center p-1">
+                                <div className="watercard radius aling center p-1">
                                     <img className='w-100' src={pokemon.sprites.front_default}></img>
                                     <div className='row aling center'>
                                         <div className="col-5 mb-1">Altura: <span className="kindatrans">{pokemon.height/10}</span>m</div>
@@ -86,11 +86,16 @@ export function PokeFull({pokemon}){
                         </div>
                     </div>
                     <div className={"card-main p-1 bg-danger"}>
-                        <div className="normalcard border radius col-12 col-md-9 col-xl-6 mb-2 ps-2">
+                        <div className="normalcard border radius col-12 col-md-9 col-xl-8 mb-2 ps-2">
                             <h4 className='card-title'>Nº{pokeid}: {pokemon.species.name.toUpperCase()}</h4>
                         </div>
-                        <div className="row ps-3">
-                            <div className={"radius "+color2+"card p-1 col-9 col-md-10"}>
+                        <div className="row ps-3 right align">
+                            <div className="col-2">
+                                <h1 className="grey aligntext">●</h1>
+                                <h1 className="grey aligntext">+</h1>
+                                <p className="kindatrans aligntext">Alf's 4DS Ω</p>
+                            </div>
+                            <div className={"radius "+color2+"card p-1 col-7 col-md-8"}>
                                 <p>Descripción:</p>
                                 <p className="kindatrans p-1">{pokemon.name.toUpperCase()} should have a description here; sadly, I don't know where it's description is so don't expect this to work for now...</p>
                                 <p>Lista de movimientos:</p>
@@ -100,18 +105,19 @@ export function PokeFull({pokemon}){
 
                             </div>
                             <div className="col-3 col-md-2">
-                                <h6 className="red"><span className="minib">+ </span> start</h6>
-                                <h6 className="red"><span className="minib">─</span> select</h6>
-                                <p className="kindatrans">Alf's</p>
-                                <p>4DS</p>
+                                <h6 className="red"><button type="button" className="btn normal p-0 radius border">+</button> start</h6>
+                                <h6 className="red"><button type="button" className="btn normal p-0 radius border">─</button> select</h6>
+                                <button type="button" className="btn btn-danger radius border">O</button>
+                                <span className="blue"> ·</span>
+
                             </div>
                         </div>
-                        <div className="row aling right">
+                        <div className="row aling right mt-1">
                             <div className="col-3 right">
                                 <h1><b>▒▒</b></h1>      
                             </div>
                             <div className="col-5">
-                                <audio controls className="bg-danger w-75 mt-1 radius border">
+                                <audio controls className="bg-danger w-75 radius border">
                                     <source src={pokemon.cries.latest} type="audio/ogg"></source>
                                     Pokemon noises.
                                 </audio>
