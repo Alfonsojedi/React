@@ -101,6 +101,7 @@ export function PokeFull({pokemon}){
                                 <p>Lista de movimientos:</p>
                                 <ul>
                                     <li>{pokemon.moves[0]["move"]["name"]+" | level: "+pokemon.moves[0]["version_group_details"][0]["level_learned_at"]+" | obtainable: "+pokemon.moves[0]["version_group_details"][0]["move_learn_method"]["name"]}</li>
+                                    <li>{pokemon.moves[1]["move"]["name"]+" | level: "+pokemon.moves[1]["version_group_details"][0]["level_learned_at"]+" | obtainable: "+pokemon.moves[1]["version_group_details"][0]["move_learn_method"]["name"]}</li>
                                 </ul>
 
                             </div>
