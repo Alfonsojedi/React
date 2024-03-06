@@ -5,11 +5,11 @@ import Reacting from './components/Reacting'
 import PokeCard from './components/PokeCard'
 import CardGrid from './components/CardGrid'
 import PokeFaker from './components/PokeFaker'
+import PokeFaker2 from './components/PokeFaker2'
 import PokeFull from './components/PokeFull'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const url = "https://pokeapi.co/api/v2/pokemon/1"
+  const [pokemon] = useState(PokeFaker2())
   /*
   useEffect(
     async() => {
@@ -19,12 +19,12 @@ function App() {
     }
   )
   */
- 
+  
   return (
     <>
       <PokeNav></PokeNav>
       <main>
-        <PokeFull pokemon={PokeFaker()}></PokeFull>
+        <PokeFull pokemon={pokemon}></PokeFull>
         <CardGrid></CardGrid>
         <CardGrid></CardGrid>
       </main>
