@@ -3,54 +3,35 @@ import ProgressBar from './ProgressBar'
 import Type from './Type'
 
 export function PokeCard({pokemon}){
-  try{
-    pokemon
-}catch{
+  if (!pokemon){
     return(<></>)
-}
-const pokeid= (pokemon.id>99?(pokemon.id>999?pokemon.id:"0"+pokemon.id):(pokemon.id>9?"00"+pokemon.id:"000"+pokemon.id))
-let type1=false
-let skill1=false
-let skill2=false
-let color1=pokemon.types[0]["type"]["name"]
-let color2=pokemon.types[0]["type"]["name"]
-let total=0
-for (let i=0;i<6;i++){
+  }
+  const pokeid= (pokemon.id>99?(pokemon.id>999?pokemon.id:"0"+pokemon.id):(pokemon.id>9?"00"+pokemon.id:"000"+pokemon.id))
+  let color1=pokemon.types[0]["type"]["name"]
+  let color2
+  if(pokemon.types[1]){
+    color2 = pokemon.types[1]["type"]["name"]
+  }else{
+    color2 = pokemon.types[0]["type"]["name"]
+  }
+  let total=0
+  for (let i=0;i<6;i++){
     total+=pokemon.stats[i]["base_stat"]
-}
-try{
-    color2= pokemon.types[1]["type"]["name"]
-}catch{
-    
-}
-try{
-    pokemon.types[1]["type"]["name"]
-    type1=true
-}catch{
-
-}
-try{
-    pokemon.types[1]["type"]["name"]
-    skill1=true
-    pokemon.types[2]["type"]["name"]
-    skill2=true
-}catch{
-    
-}
+  }
   return(
     <div className='col-4 p-2'>
       <div className='card'>
         <div className={"card-header "+color1+"card"}>
           <div className='row'>
-            <Type type={pokemon.types[0]["type"]["name"]}></Type>
-            {type1 ?
-            <Type type={pokemon.types[1]["type"]["name"]}></Type>:<></>}
+            {pokemon.types.map(element => {
+              return <Type type={element["type"]["name"]}></Type>
+            })}
           </div>
           <div className='row'>
           <img className='w-100' src={pokemon.sprites.front_default}></img>
           <div className='row align center'>
-              <div className="col-12 col-md-5 mb-1">Altura: <span className="kindatrans">{pokemon.height/10}</span>m</div>
-              <div className="col-12 col-md-5 mb-1">Peso: <span className="kindatrans">{pokemon.weight/10}</span>kg</div>
+            <div className="col-12 col-md-5 mb-1">Altura: <span className="kindatrans">{pokemon.height/10}</span>m</div>
+            <div className="col-12 col-md-5 mb-1">Peso: <span className="kindatrans">{pokemon.weight/10}</span>kg</div>
           </div>
           </div>
         </div>

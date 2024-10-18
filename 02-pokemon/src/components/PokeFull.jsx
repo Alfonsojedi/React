@@ -4,39 +4,20 @@ import Type from "./Type";
 
 export function PokeFull({pokemon}){
     //Checkear en un bucle si pokemon.stats[1] existe, si no, crear otro return
-    try{
-        pokemon
-    }catch{
+    if(!pokemon){
         return(<></>)
     }
     const pokeid= (pokemon.id>99?(pokemon.id>999?pokemon.id:"0"+pokemon.id):(pokemon.id>9?"00"+pokemon.id:"000"+pokemon.id))
-    let type1=false
-    let skill1=false
-    let skill2=false
     let color1=pokemon.types[0]["type"]["name"]
-    let color2=pokemon.types[0]["type"]["name"]
+    let color2
     let total=0
     for (let i=0;i<6;i++){
         total+=pokemon.stats[i]["base_stat"]
     }
-    try{
-        color2= pokemon.types[1]["type"]["name"]
-    }catch{
-        
-    }
-    try{
-        pokemon.types[1]["type"]["name"]
-        type1=true
-    }catch{
-
-    }
-    try{
-        pokemon.types[1]["type"]["name"]
-        skill1=true
-        pokemon.types[2]["type"]["name"]
-        skill2=true
-    }catch{
-        
+    if(pokemon.types[1]){
+        color2=pokemon.types[1]["type"]["name"]
+    }else{
+        color2=pokemon.types[0]["type"]["name"]
     }
     return(
         <div className='row m-2 aling center'>
@@ -54,20 +35,18 @@ export function PokeFull({pokemon}){
                                     </div>
                                 </div>
                                 <div className='row mt-2'>
-                                        <Type type={pokemon.types[0]["type"]["name"]}></Type>
-                                        {type1 ?
-                                        <Type type={pokemon.types[1]["type"]["name"]}></Type>:<></>}
-                                    </div>
+                                    {pokemon.types.map(element => {
+                                        return <Type type={element["type"]["name"]}></Type>
+                                    })}
+                                </div>
                             </div>
                             <div className="col-7">
                                 <div className={"radius p-1 "+color1+"card"}>
                                     <h6>Habilidades:</h6>
                                     <ol>
-                                        <li>{pokemon.abilities[0]["ability"]["name"]}</li>
-                                        {skill1 ?
-                                        <li>{pokemon.abilities[1]["ability"]["name"]}</li>:<></>}
-                                        {skill2 ?
-                                        <li>{pokemon.abilities[2]["ability"]["name"]}</li>:<></>}
+                                        {pokemon.abilities.map(element =>{
+                                            return <li>{element["ability"]["name"]}</li>
+                                        })}
                                     </ol>
                                     <ProgressBar amount={pokemon.stats[0]["base_stat"]} stat={"HP"}></ProgressBar>
                                     <ProgressBar amount={pokemon.stats[1]["base_stat"]} stat={"Atk"}></ProgressBar>
@@ -100,8 +79,9 @@ export function PokeFull({pokemon}){
                                 <p className="kindatrans p-1">{pokemon.name.toUpperCase()} should have a description here; sadly, I don't know where it's description is so don't expect this to work for now...</p>
                                 <p>Lista de movimientos:</p>
                                 <ul>
-                                    <li>{pokemon.moves[0]["move"]["name"]+" | level: "+pokemon.moves[0]["version_group_details"][0]["level_learned_at"]+" | obtainable: "+pokemon.moves[0]["version_group_details"][0]["move_learn_method"]["name"]}</li>
-                                    <li>{pokemon.moves[1]["move"]["name"]+" | level: "+pokemon.moves[1]["version_group_details"][0]["level_learned_at"]+" | obtainable: "+pokemon.moves[1]["version_group_details"][0]["move_learn_method"]["name"]}</li>
+                                    {pokemon.moves.map(move => {
+                                        return <li>{move["move"]["name"]+" | lvl: "+move["version_group_details"][0]["level_learned_at"]+" | de: "+move["version_group_details"][0]["move_learn_method"]["name"]}</li>
+                                    })}
                                 </ul>
 
                             </div>
