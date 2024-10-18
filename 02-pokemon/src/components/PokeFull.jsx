@@ -1,9 +1,10 @@
 import { useState } from "react";
-import ProgressBar from "./ProgressBar";
+import Stater from "./Stater";
 import Type from "./Type";
 
 export function PokeFull({pokemon}){
     //Checkear en un bucle si pokemon.stats[1] existe, si no, crear otro return
+    //fetch(v2/evolution-chain/{pokemonid})
     if(!pokemon){
         return(<></>)
     }
@@ -48,12 +49,7 @@ export function PokeFull({pokemon}){
                                             return <li>{element["ability"]["name"]}</li>
                                         })}
                                     </ol>
-                                    <ProgressBar amount={pokemon.stats[0]["base_stat"]} stat={"HP"}></ProgressBar>
-                                    <ProgressBar amount={pokemon.stats[1]["base_stat"]} stat={"Atk"}></ProgressBar>
-                                    <ProgressBar amount={pokemon.stats[2]["base_stat"]} stat={"Dfs"}></ProgressBar>
-                                    <ProgressBar amount={pokemon.stats[3]["base_stat"]} stat={"SpAtk"}></ProgressBar>
-                                    <ProgressBar amount={pokemon.stats[4]["base_stat"]} stat={"SpDfs"}></ProgressBar>
-                                    <ProgressBar amount={pokemon.stats[5]["base_stat"]} stat={"Spd"}></ProgressBar>
+                                    <Stater stats={pokemon.stats}></Stater>
                                     <p>Estadísticas totales: {total} puntos</p>
                                     <h6>Cadena evolutiva:</h6>
                                     <p className="kindatrans">Bulvasaur||Ivysaur||Venosaur</p>

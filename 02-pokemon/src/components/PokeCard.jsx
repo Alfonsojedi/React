@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import ProgressBar from './ProgressBar'
 import Type from './Type'
+import Stater from './Stater'
 
 export function PokeCard({pokemon}){
   if (!pokemon){
@@ -37,14 +37,7 @@ export function PokeCard({pokemon}){
         </div>
         <div className={"card-main "+color2+"card"}>
           <h5 className='card-title ps-1 pt-1'>{pokemon.name.toUpperCase()}:</h5>
-          <div className='p-1'>
-            <ProgressBar amount={pokemon.stats[0]["base_stat"]} stat={"HP"}></ProgressBar>
-            <ProgressBar amount={pokemon.stats[1]["base_stat"]} stat={"Atk"}></ProgressBar>
-            <ProgressBar amount={pokemon.stats[2]["base_stat"]} stat={"Dfs"}></ProgressBar>
-            <ProgressBar amount={pokemon.stats[3]["base_stat"]} stat={"SpAtk"}></ProgressBar>
-            <ProgressBar amount={pokemon.stats[4]["base_stat"]} stat={"SpDfs"}></ProgressBar>
-            <ProgressBar amount={pokemon.stats[5]["base_stat"]} stat={"Spd"}></ProgressBar>
-          </div>
+          <Stater stats={pokemon.stats}></Stater>
         </div>
       </div>
     </div>

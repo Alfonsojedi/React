@@ -6,9 +6,9 @@ body {
 }
 .type{
   border: #000 1px solid;
-  border-radius: .5em;
-  margin-left: 1em;
-  margin-right: 1em;
+  border-radius: .5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   text-align:center;
 }
 .bug{
@@ -149,7 +149,7 @@ body {
 }
 .radius{
   border: #44CCFF 1px solid;
-  border-radius: 1.5em;
+  border-radius: 1.5rem;
 }
 .kindatrans{
   color: #333A;
@@ -165,7 +165,7 @@ body {
 }
 .minib{
   border: #888888 1px solid;
-  border-radius: 1em;
+  border-radius: 1rem;
   background-color: #CCCCCC;
   font-size: larger;
   color: #666;
