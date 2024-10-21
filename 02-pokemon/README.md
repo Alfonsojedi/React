@@ -4,12 +4,12 @@ The Pokedex data is obtained through feching the information from the PokeAPI.
 
 This proyect is still a 'Work In Progress', this proyect is still getting updated and it's not yet a finished product.
 
-#Author
+# Author
 
 'Alfonsojedi'
 
 
-#React + Vite
+# React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
