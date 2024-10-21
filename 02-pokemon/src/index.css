@@ -1,4 +1,51 @@
-body {
+:root{
+  --black: #000;
+  --white: #FFF;
+  --lgray: #CCC;
+  --gray: #888;
+
+  --red: #8218;
+  --grey: #DDD;
+  --trans: #6663;
+  
+  --bug: #8C0;
+  --bugc: #CF0;
+  --dark: #444;
+  --darkc: #999;
+  --dragon: #448;
+  --dragonc: #88F;
+  --electric: #FF0;
+  --electricc: #FF8;
+  --fairy: #F8C;
+  --fairyc: #F8F;
+  --fighting: #C40;
+  --fightingc: #F86;
+  --fire: #F80;
+  --firec: #FC6;
+  --flying: #4CF;
+  --flyingc: #CEF;
+  --ghost: #408;
+  --ghostc: #84C;
+  --grass: #4F0;
+  --grassc: #CF8;
+  --ground: #440;
+  --groundc: #884;
+  --ice: #0FF;
+  --icec: #8FF;
+  --normal: #CCC;
+  --normalc: #FFF;
+  --poison: #80F;
+  --poisonc: #C8F;
+  --psychic: #C08;
+  --psychicc: #E4C;
+  --rock: #840;
+  --rockc: #C84;
+  --steel: #888;
+  --steelc: #DDD;
+  --water: #08F;
+  --waterc: #4CF;
+}
+body{
   font-family: system-ui, Arial;
   margin: 0;
   min-width: 320px;
@@ -12,125 +59,126 @@ body {
   text-align:center;
 }
 .bug{
-  background-color: #88CC00;
+  background-color: var(--bug);
 }
 .bugcard{
-  background-color: #CCFF00;
+  background-color: var(--bugc);
 }
 .dark{
-  background-color: #444444;
+  background-color: var(--dark);
   color:#FFF;
 }
 .darkcard{
-  background-color: #999999;
+  background-color: var(--darkc);
 }
 .dragon{
-  background-color: #444488;
+  background-color: var(--dragon);
   color:#FFF;
 }
 .dragoncard{
-  background-color: #8888FF;
+  background-color: var(--dragonc);
 }
 .electric{
-  background-color: #FFFF00;
+  background-color: var(--electric);
 }
 .electriccard{
-  background-color: #FFFF88;
+  background-color: var(--electricc);
 }
 .fairy{
-  background-color: #FF88CC;
+  background-color: var(--fairy);
 }
 .fairycard{
-  background-color: #FFCCFF;
+  background-color: var(--fairyc);
 }
 .fighting{
-  background-color: #CC4400;
+  background-color: var(--fighting);
   color:#FFF;
 }
 .fightingcard{
-  background-color: #FF8866;
+  background-color: var(--fightingc);
 }
 .fire{
-  background-color: #FF8800;
+  background-color: var(--fire);
 }
 .firecard{
-  background-color: #FFCC66;
+  background-color: var(--firec);
 }
 .flying{
-  background-color: #44CCFF;
+  background-color: var(--flying);
 }
 .flyingcard{
-  background-color: #CCEEFF;
+  background-color: var(--flyingc);
 }
 .ghost{
-  background-color: #440088;
-  color:#FFF;
+  background-color: var(--ghost);
+  color: var(--white);
 }
 .ghostcard{
-  background-color: #8844CC;
+  background-color: var(--ghostc);
 }
 .grass{
-  background-color: #44FF00;
+  background-color: var(--grass);
 }
 .grasscard{
-  background-color:#CCFF88;
+  background-color: var(--grassc);
 }
 .ground{
-  background-color: #444400;
-  color:#FFF;
+  background-color: var(--ground);
+  color: var(--white);
+
 }
 .groundcard{
-  background-color: #888844;
+  background-color: var(--groundc);
 }
 .ice{
-  background-color: #00FFFF;
+  background-color: var(--ice);
 }
 .icecard{
-  background-color: #88FFFF;
+  background-color: var(--icec);
 }
 .normal{
-  background-color: #CCCCCC;
+  background-color: var(--normal);
 }
 .normalcard{
-  background-color: #FFFFFF;
+  background-color: var(--normalc);
 }
 .poison{
-  background-color: #8800FF;
+  background-color: var(--poison);
 }
 .poisoncard{
-  background-color: #CC88FF;
+  background-color: var(--poisonc);
 }
 .psychic{
-  background-color: #CC0088;
+  background-color: var(--psychic);
 }
 .psychiccard{
-  background-color: #EE44CC;
+  background-color: var(--psichicc);
 }
 .rock{
-  background-color: #884400;
-  color:#FFF;
+  background-color: var(--rock);
+  color: var(--white);
 }
 .rockcard{
-  background-color: #CC8844;
+  background-color: var(--rockc);
 }
 .steel{
-  background-color: #888888;
+  background-color: var(--steel);
 }
 .steelcard{
-  background-color: #DDDDDD;
+  background-color: var(--steelc);
 }
 .water{
-  background-color: #0088FF;
+  background-color: var(--water);
 }
 .watercard{
-  background-color: #44CCFF;
+  background-color: var(--waterc);
 }
 .ministat{
   font-size: 1.5vw;
   text-align: right;
 }
 .trans{
-  background-color: #6663;
+  background-color: var(--trans);
 }
 .align{
   align-items: center;
@@ -158,10 +206,10 @@ body {
   background-color: #FDC;
 }
 .white{
-  color: #FFF;
+  color: var(--white);
 }
 .grey{
-  color: #DDD;
+  color: var(--grey);
 }
 .minib{
   border: #888888 1px solid;
@@ -171,9 +219,9 @@ body {
   color: #666;
 }
 .red{
-  color:#8218
+  color: var(--red);
 }
 .blue{
-  color:#00CCFF;
+  color:#0CF;
   font-size: xx-large;
 }
