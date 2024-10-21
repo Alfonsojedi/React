@@ -1,12 +1,17 @@
 :root{
+  font-family: system-ui, Arial;
   --black: #000;
   --white: #FFF;
   --lgray: #CCC;
   --gray: #888;
+  --dgray: #666;
 
   --red: #8218;
+  --scarlet: #FDC;
+  --blue: #0CF;
   --grey: #DDD;
   --trans: #6663;
+  --ktrans: #333A;
   
   --bug: #8C0;
   --bugc: #CF0;
@@ -46,13 +51,27 @@
   --waterc: #4CF;
 }
 body{
-  font-family: system-ui, Arial;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
 }
+.align{
+  align-items: center;
+}
+.aligntext{
+  text-align: center;
+}
+.bold{
+  font-weight: bolder;
+}
+.center{
+  justify-content: center;
+}
+.right{
+  justify-content: right;
+}
 .type{
-  border: #000 1px solid;
+  border: var(--black) 1px solid;
   border-radius: .5rem;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -177,51 +196,36 @@ body{
   font-size: 1.5vw;
   text-align: right;
 }
-.trans{
-  background-color: var(--trans);
-}
-.align{
-  align-items: center;
-}
-.aligntext{
-  text-align: center;
-}
-.bold{
-  font-weight: bolder;
-}
-.center{
-  justify-content: center;
-}
-.right{
-  justify-content: right;
-}
-.radius{
-  border: #44CCFF 1px solid;
-  border-radius: 1.5rem;
-}
-.kindatrans{
-  color: #333A;
-}
-.scarlet{
-  background-color: #FDC;
-}
 .white{
   color: var(--white);
 }
 .grey{
   color: var(--grey);
 }
-.minib{
-  border: #888888 1px solid;
-  border-radius: 1rem;
-  background-color: #CCCCCC;
-  font-size: larger;
-  color: #666;
-}
 .red{
   color: var(--red);
 }
 .blue{
-  color:#0CF;
+  color: var(--blue);
   font-size: xx-large;
+}
+.trans{
+  background-color: var(--trans);
+}
+.kindatrans{
+  color: var(--ktrans);
+}
+.radius{
+  border: #44CCFF 1px solid;
+  border-radius: 1.5rem;
+}
+.scarlet{
+  background-color: var(--scarlet);
+}
+.minib{
+  border: var(--gray) 1px solid;
+  border-radius: 1rem;
+  background-color: var(--lgray);
+  font-size: larger;
+  color: var(--dgray);
 }
