@@ -6,5 +6,5 @@ Incluye:
   -3 en raya
   -Mostrar Pokemon
   -Tetris
-#Autor
+# Autor
 'Alfonsojedi'
