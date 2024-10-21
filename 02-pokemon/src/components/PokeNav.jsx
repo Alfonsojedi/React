@@ -1,21 +1,8 @@
 import { useState } from 'react'
 import NavItem from './NavItem'
 
-/*
-async function regionsFetch(){
-  let response = await fetch("https://pokeapi.co/api/v2/region");
-  let regions = await response.json();
-  let regiones = [];
-  regions.results.foeach(region => {
-    regiones.push(region.name);
-  })
-  return regiones;
-}
-*/
-
 export function PokeNav(){
-  //const regiones = regionsFetch();
-  const regiones=["Kanto","Johto","Hoenn","Sinnoh","Unova","Kalos","Alola","Galar","Paldea]
+  const regiones = ["1","2","Prueba"];
   return(
     <nav className="navbar navbar-expand-sm bg-danger">
       <div className="container-fluid">
@@ -24,7 +11,7 @@ export function PokeNav(){
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">Home</a>
             </li>
-            {regiones.map(region =>{
+            {regiones.map(region => {
               return <NavItem region={region}></NavItem>
             })}
           </ul>

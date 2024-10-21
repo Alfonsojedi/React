@@ -15,9 +15,20 @@ async function fetchPoke(id){
 }
 const result = fetchPoke(3);
 console.log(result)
+
+async function regionsFetch(){
+  let response = await fetch("https://pokeapi.co/api/v2/region");
+  let regions = await response.json();
+  let regiones = [];
+  regions.results.foreach(region => {
+    regiones.push(region.name);
+  })
+  return regiones;
+}
 */
 
 function App() {
+  const [regiones, getRegiones] = useState(["0","1","2"])
   let pokemon = result
   let pokemons = [result,result,result,result]
   
