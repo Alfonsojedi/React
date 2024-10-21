@@ -1,4 +1,15 @@
-# React + Vite
+# Pokedex
+This proyect contains a 'working' Pokedex that uses React and Vite in order to work.
+The Pokedex data is obtained through feching the information from the PokeAPI.
+
+This proyect is still a 'Work In Progress', this proyect is still getting updated and it's not yet a finished product.
+
+#Author
+
+'Alfonsojedi'
+
+
+#React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
