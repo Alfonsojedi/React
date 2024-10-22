@@ -5,6 +5,7 @@ import Type from "./Type";
 export function PokeFull({pokemon}){
     //Checkear en un bucle si pokemon.stats[1] existe, si no, crear otro return
     //fetch(v2/evolution-chain/{pokemonid})
+    let evos = ["Bulvasaur","Ivysaur","Venosaur"]
     if(!pokemon){
         return(<></>)
     }
@@ -52,8 +53,9 @@ export function PokeFull({pokemon}){
                                     <Stater stats={pokemon.stats}></Stater>
                                     <p>Estadísticas totales: {total} puntos</p>
                                     <h6>Cadena evolutiva:</h6>
-                                    <p className="kindatrans">Bulvasaur||Ivysaur||Venosaur</p>
-                                    <p className="kindatrans">Bulvasaur||Snorlax</p>
+                                    <p className="kindatrans">{evos.map(evo => {
+                                        return <span className="ps-2 pe-2">evo</span>
+                                    })}</p>
                                     <h6>Zona de captura:</h6>
                                     <p className="kindatrans">{pokemon.location_area_encounters}</p>
                                 </div>
