@@ -25,6 +25,37 @@ async function regionsFetch(){
   })
   return regiones;
 }
+async function getEvos(id){
+    let cadena =await getChain(id)
+    return evoMaker(cadena.chain)
+}
+async function getChain(id) {
+    let response
+    let result
+    //Fetching the chain
+    response = await fetch("https://pokeapi.co/api/v2/pokemon-species/" + id);
+    result = await response.json();
+    id = result.evolution_chain.url.slice(42, result.evolution_chain.url.length - 1)
+
+    //Fetching the Pókemons involved
+    response = await fetch("https://pokeapi.co/api/v2/evolution-chain/" + id);
+    result = await response.json();
+    return result;
+}
+function evoMaker(cadena){
+    let evos = []
+    evos.push(cadena.species.name)
+    //Bucles foreach... HACER Función loop aquí
+
+    cadena.evolves_to.map(evo => {
+        evos.push(evo.species.name)
+        evo.evolves_to.map(evo2 => {
+            evos.push(evo2.species.name)
+        })
+    })
+    console.log(evos)
+    return evos
+}
 */
 
 function App() {
