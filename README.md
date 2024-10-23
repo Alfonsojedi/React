@@ -3,8 +3,8 @@ Multiples proyectos de React y React Native.
 (Algunos proyectos no están completos)
 
 Incluye:
-  -3 en raya
-  -Mostrar Pokemon
-  -Tetris
+  - 3 en raya
+  - Mostrar Pokemon
+  - Tetris
 # Autor
 'Alfonsojedi'
