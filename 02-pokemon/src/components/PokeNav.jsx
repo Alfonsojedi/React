@@ -2,7 +2,7 @@ import { useState } from 'react'
 import NavItem from './NavItem'
 
 export function PokeNav(){
-  const regiones = ["1","2","Prueba"];
+  const regiones = ["Kanto","2","Prueba"];
   return(
     <nav className="navbar navbar-expand-sm bg-danger">
       <div className="container-fluid">

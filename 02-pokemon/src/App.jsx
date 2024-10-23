@@ -6,16 +6,40 @@ import PokeCard from './components/PokeCard'
 import CardGrid from './components/CardGrid'
 import PokeFull from './components/PokeFull'
 
-const response = await fetch("https://pokeapi.co/api/v2/pokemon/3");
-const result = await response.json()
-/*
-async function fetchPoke(id){
-  const response = await fetch("https://pokeapi.co/api/v2/pokemon/"+id);
-  return await response.json()
+async function Pokemon(url){//await only works on async functions
+  let response = await fetch(url);//use the url to get data from the API
+  let result = await response.json()//Convert the data into usable JSON
+  return result
 }
-const result = fetchPoke(3);
-console.log(result)
+async function PokemonRegion(region){
+  //Saltar paso A si tienes el número
+  //region can be string and it works too
+  let response = await fetch("https://pokeapi.co/api/v2/region/"+region);//use the url to get data from the API
+  let result = await response.json()
 
+  //En gen 9,10 u 11+ este code daría error
+  response = await fetch(result.main_generation.url)
+  result = await response.json()
+  let pokeurls = [];
+  result.pokemon_species.map(pokeobject => {
+    pokeurls.push(pokeobject.url.replace('-species',''))
+  })
+  return pokeurls
+  
+}
+
+let pokelist=[]
+try{
+  const urls = await PokemonRegion(1)
+  pokelist = await Promise.all(urls.map(async url => await Pokemon(url)))
+  console.log(pokelist)
+  console.log("ye")
+
+}catch(error){
+  console.log(error)
+}
+//Unused
+/*
 async function regionsFetch(){
   let response = await fetch("https://pokeapi.co/api/v2/region");
   let regions = await response.json();
@@ -43,25 +67,24 @@ async function getChain(id) {
     return result;
 }
 function evoMaker(cadena){
-    let evos = []
-    evos.push(cadena.species.name)
-    //Bucles foreach... HACER Función loop aquí
+  let evos = []
+  evos.push(cadena.species.name)
+  //Bucles foreach... HACER Función loop aquí
 
-    cadena.evolves_to.map(evo => {
-        evos.push(evo.species.name)
-        evo.evolves_to.map(evo2 => {
-            evos.push(evo2.species.name)
-        })
+  cadena.evolves_to.map(evo => {
+    evos.push(evo.species.name)
+    evo.evolves_to.map(evo2 => {
+      evos.push(evo2.species.name)
     })
-    console.log(evos)
-    return evos
+  })
+  console.log(evos)
+  return evos
 }
 */
-
 function App() {
   const [regiones, getRegiones] = useState(["0","1","2"])
-  let pokemon = result
-  let pokemons = [result,result,result,result]
+  let pokemon = pokelist[0]
+  let pokemons = pokelist
   
   return (
     <>

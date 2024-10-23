@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Type from './Type'
 import Stater from './Stater'
+import { Weighter } from './Weighter'
 
 export function PokeCard({pokemon}){
   if (!pokemon){
@@ -29,10 +30,7 @@ export function PokeCard({pokemon}){
           </div>
           <div className='row'>
           <img className='w-100' src={pokemon.sprites.front_default}></img>
-          <div className='row align center'>
-            <div className="col-12 col-md-5 mb-1">Altura: <span className="kindatrans">{pokemon.height/10}</span>m</div>
-            <div className="col-12 col-md-5 mb-1">Peso: <span className="kindatrans">{pokemon.weight/10}</span>kg</div>
-          </div>
+          <Weighter height={pokemon.height} weight={pokemon.weight}></Weighter>
           </div>
         </div>
         <div className={"card-main "+color2+"card"}>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Stater from "./Stater";
 import Type from "./Type";
+import { Weighter } from "./Weighter";
 
 export function PokeFull({pokemon}){
     //Checkear en un bucle si pokemon.stats[1] existe, si no, crear otro return
@@ -31,10 +32,7 @@ export function PokeFull({pokemon}){
                                 <div className="watercard radius aling center p-1">
                                     <h4 className="aligntext ">{pokemon.species.name.toUpperCase()}</h4>
                                     <img className='w-100' src={pokemon.sprites.front_default}></img>
-                                    <div className='row aling center'>
-                                        <div className="col-5 mb-1">Altura: <span className="kindatrans">{pokemon.height/10}</span>m</div>
-                                        <div className="col-5 mb-1">Peso: <span className="kindatrans">{pokemon.weight/10}</span>kg</div>
-                                    </div>
+                                    <Weighter height={pokemon.height} weight={pokemon.weight}></Weighter>
                                 </div>
                                 <div className='row mt-2'>
                                     {pokemon.types.map(element => {
