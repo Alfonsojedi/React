@@ -10,9 +10,9 @@ Made by @Alfonsojedi
 ## Componets
 Components used:
 - PokeNav
-- - NavItem
+-- NavItem
 - CardGrid
-- - PokeCard
+  - PokeCard
 - PokeFull
 - Stater
 - - ProgressBar
