@@ -7,7 +7,7 @@
   --dgray: #666;
 
   --red: #8218;
-  --scarlet: #FDC;
+  --scarlet: #FDB;
   --blue: #0CF;
   --grey: #DDD;
   --trans: #6663;
@@ -209,7 +209,7 @@ body{
   background-color: var(--blue);
   border-radius: 50%;
   width: .2rem;
-  heigth: .2rem;
+  height: .2rem;
 }
 /*Reemplazar blue por dot*/
 .blue{
@@ -225,6 +225,9 @@ body{
 .radius{
   border: #44CCFF 1px solid;
   border-radius: 1.5rem;
+}
+.round{
+  border-radius: 50%;
 }
 .scarlet{
   background-color: var(--scarlet);
