@@ -10,12 +10,12 @@ Made by @Alfonsojedi
 ## Componets
 Components used:
 - **PokeNav**: Navegador de la página
--- **NavItem**:
+  - **NavItem**:
 - **CardGrid**: Organiza las cartas
--- **PokeCard**: Cada una de las cartas que muestran 1 Pokémon, simplificadas para facilitar su visivilidad.
+  - **PokeCard**: Cada una de las cartas que muestran 1 Pokémon, simplificadas para facilitar su visivilidad.
 - **PokeFull**: Un componente que se asemeja a una 2DS y a una Pokédex de la era, pero con ciertas diferencias 
 - **Stater**:
--- **ProgressBar**:
+  - **ProgressBar**:
 - **Type**:
 - **Weighter**:
 
