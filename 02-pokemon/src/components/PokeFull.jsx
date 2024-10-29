@@ -52,7 +52,7 @@ export function PokeFull({pokemon}){
                                     <p>Estadísticas totales: {total} puntos</p>
                                     <h6>Cadena evolutiva:</h6>
                                     <p className="kindatrans">{evos.map(evo => {
-                                        return <span className="ps-2 pe-2">evo</span>
+                                        return <span className="ps-2 pe-2">{evo}</span>
                                     })}</p>
                                     <h6>Zona de captura:</h6>
                                     <p className="kindatrans">{pokemon.location_area_encounters}</p>
@@ -85,7 +85,7 @@ export function PokeFull({pokemon}){
                                 <h6 className="red"><button type="button" className="btn normal p-0 radius border">+</button> start</h6>
                                 <h6 className="red"><button type="button" className="btn normal p-0 radius border">─</button> select</h6>
                                 <button type="button" className="btn btn-danger radius border">O</button>
-                                <span className="blue"> ·</span>
+                                <div className="ms-1 dot"></div>
 
                             </div>
                         </div>
