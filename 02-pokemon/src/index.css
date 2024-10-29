@@ -205,6 +205,13 @@ body{
 .red{
   color: var(--red);
 }
+.dot{
+  background-color: var(--blue);
+  border-radius: 50%;
+  width: .2rem;
+  heigth: .2rem;
+}
+/*Reemplazar blue por dot*/
 .blue{
   color: var(--blue);
   font-size: xx-large;
