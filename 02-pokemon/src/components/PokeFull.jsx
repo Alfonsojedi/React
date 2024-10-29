@@ -6,10 +6,8 @@ import { Weighter } from "./Weighter";
 export function PokeFull({pokemon}){
     //Checkear en un bucle si pokemon.stats[1] existe, si no, crear otro return
     //fetch(v2/evolution-chain/{pokemonid})
+    !pokemon && return null
     let evos = ["Bulvasaur","Ivysaur","Venosaur"]
-    if(!pokemon){
-        return(<></>)
-    }
     const pokeid= (pokemon.id>99?(pokemon.id>999?pokemon.id:"0"+pokemon.id):(pokemon.id>9?"00"+pokemon.id:"000"+pokemon.id))
     let color1=pokemon.types[0]["type"]["name"]
     let color2
