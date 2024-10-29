@@ -76,7 +76,7 @@ export function PokeFull({pokemon}){
                                 <p>Lista de movimientos:</p>
                                 <ul>
                                     {pokemon.moves.map(move => {
-                                        return <li>{move["move"]["name"]+" | lvl: "+move["version_group_details"][0]["level_learned_at"]+" | de: "+move["version_group_details"][0]["move_learn_method"]["name"]}</li>
+                                        return <li key={move["move"]["name"]}>{move["move"]["name"]+" | lvl: "+move["version_group_details"][0]["level_learned_at"]+" | de: "+move["version_group_details"][0]["move_learn_method"]["name"]}</li>
                                     })}
                                 </ul>
 
