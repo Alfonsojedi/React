@@ -6,7 +6,7 @@
   --gray: #888;
   --dgray: #666;
 
-  --red: #8218;
+  --red: #844;
   --scarlet: #FDB;
   --blue: #0CF;
   --grey: #DDD;
@@ -208,13 +208,8 @@ body{
 .dot{
   background-color: var(--blue);
   border-radius: 50%;
-  width: .2rem;
-  height: .2rem;
-}
-/*Reemplazar blue por dot*/
-.blue{
-  color: var(--blue);
-  font-size: xx-large;
+  width: .4rem;
+  height: .4rem;
 }
 .trans{
   background-color: var(--trans);
@@ -225,6 +220,16 @@ body{
 .radius{
   border: #44CCFF 1px solid;
   border-radius: 1.5rem;
+}
+.radius-btn{
+  border: #44CCFF 1px solid;
+  background-color:var(--normal);
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.6rem;
+}
+.radius-btn:hover{
+  background-color: var(--white);
 }
 .round{
   border-radius: 50%;
