@@ -7,4 +7,4 @@ Incluye:
   - Mostrar Pokemon
   - Tetris
 # Autor
-'Alfonsojedi'
+@Alfonsojedi
