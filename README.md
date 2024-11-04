@@ -4,7 +4,8 @@ Multiples proyectos de React y React Native.
 
 Incluye:
   - 3 en raya
-  - Mostrar Pokemon
-  - Tetris
-# Autor
+  - Pokédex
+  - Tetris (React Native)
+  - (Modelo React de prueba)
+## Autor
 @Alfonsojedi
