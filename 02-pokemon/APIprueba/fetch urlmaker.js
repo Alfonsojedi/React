@@ -3,7 +3,7 @@ async function FetchAPI(url){//await only works on async functions
     let result = await response.json()//Convert the data into usable JSON
     return result
 }
-async function PokemonRegion(region){
+async function PokeRegion(region){
     //Saltar paso A si tienes el número
     //region can be string and it works too
     //use the url to get data from the API
@@ -18,7 +18,7 @@ async function PokemonRegion(region){
 }
 
 try{
-    const urls = PokemonRegion("kanto")
+    const urls = PokeRegion("kanto")
     let pokemons = []
     pokemons.push(urls.map(url => FetchAPI(url)))
 }catch(error){//Exception e in JavaScript
