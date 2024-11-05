@@ -14,7 +14,7 @@ async function PokeRegion(region){
     result.pokemon_species.map(pokeobject => {
         pokeurls.push(pokeobject.url)
     })
-    return genobject
+    return pokeurls
 }
 
 try{
