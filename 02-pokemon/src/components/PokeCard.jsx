@@ -29,8 +29,8 @@ export function PokeCard({pokemon}){
             })}
           </div>
           <div className='row'>
-          <img className='w-100' src={pokemon.sprites.front_default}></img>
-          <Weighter height={pokemon.height} weight={pokemon.weight}></Weighter>
+            <img className='w-100' src={pokemon.sprites.front_default}></img>
+            <Weighter height={pokemon.height} weight={pokemon.weight}></Weighter>
           </div>
         </div>
         <div className={"card-main "+color2+"card"}>
