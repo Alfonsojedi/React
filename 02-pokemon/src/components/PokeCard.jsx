@@ -4,9 +4,6 @@ import Stater from './Stater'
 import Weighter from './Weighter'
 
 export function PokeCard({pokemon}){
-  if (!pokemon){
-    return(<></>)
-  }
   const pokeid=(pokemon.id>99?(pokemon.id>999?pokemon.id:"0"+pokemon.id):(pokemon.id>9?"00"+pokemon.id:"000"+pokemon.id))
   let color1=pokemon.types[0]["type"]["name"]
   let color2=color2 = pokemon.types[0]["type"]["name"]
@@ -14,7 +11,7 @@ export function PokeCard({pokemon}){
     color2 = pokemon.types[1]["type"]["name"]
   }
   let total=0
-  for (let i=0;i<6;i++){
+  for(let i=0;i<6;i++){
     total+=pokemon.stats[i]["base_stat"]
   }
   return(
