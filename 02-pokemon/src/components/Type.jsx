@@ -2,9 +2,7 @@ import { useState } from 'react'
 
 export function Type({type}){
     return(
-        <div className={"col type "+type}>
-            {type}
-        </div>
+        <div className={"col type "+type}>{type}</div>
     )
 }
 
