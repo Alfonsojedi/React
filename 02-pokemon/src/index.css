@@ -5,9 +5,9 @@
   --lgray: #CCC;
   --gray: #888;
   --dgray: #666;
+  --back: #FDB;
 
   --red: #844;
-  --scarlet: #FDB;
   --blue: #4CF;
   --grey: #DDD;
   --trans: #6663;
@@ -54,6 +54,7 @@ body{
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--back);
 }
 .align{
   align-items: center;
@@ -232,9 +233,6 @@ body{
 }
 .round{
   border-radius: 50%;
-}
-.scarlet{
-  background-color: var(--scarlet);
 }
 .minib{
   border: var(--gray) 1px solid;
