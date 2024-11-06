@@ -27,15 +27,15 @@ export function PokeFull({pokemon}){
                 <div className="card-header bg-danger">
                     <div className="row mt-1">
                         <div className="col-5">
-                            <div className="watercard radius align center p-1">
-                                <h4 className="aligntext">{pokemon.species.name.toUpperCase()}</h4>
-                                <img className='w-100' src={pokemon.sprites.front_default}></img>
-                                <Weighter height={pokemon.height} weight={pokemon.weight}></Weighter>
-                            </div>
                             <div className='row mt-2'>
                                 {pokemon.types.map(element => {
                                     return <Type type={element["type"]["name"]}></Type>
                                 })}
+                            </div>
+                            <div className="watercard radius align center p-1">
+                                <h4 className="aligntext">{pokemon.species.name.toUpperCase()}</h4>
+                                <img className='w-100' src={pokemon.sprites.front_default}></img>
+                                <Weighter height={pokemon.height} weight={pokemon.weight}></Weighter>
                             </div>
                         </div>
                         <div className="col-7">
@@ -70,7 +70,7 @@ export function PokeFull({pokemon}){
                         </div>
                         <div className={"radius "+color2+"card p-1 col-7 col-md-8"}>
                             <p>Descripción:</p>
-                            <p className="kindatrans p-1">{pokemon.name.toUpperCase()} should have a description here; sadly, I don't know where it's description is so don't expect this to work for now...</p>
+                            <p className="kindatrans p-1">{pokemon.name.toUpperCase()} should have a description here; sadly, I don't know where it's description is, so don't expect this to work...</p>
                             <p>Lista de movimientos:</p>
                             <ul>
                                 {pokemon.moves.map(move => {
