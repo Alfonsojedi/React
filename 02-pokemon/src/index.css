@@ -5,9 +5,9 @@
   --lgray: #CCC;
   --gray: #888;
   --dgray: #666;
+  --background: #FDB;
 
   --red: #844;
-  --scarlet: #FDB;
   --blue: #0CF;
   --grey: #DDD;
   --trans: #6663;
@@ -54,6 +54,7 @@ body{
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--background);
 }
 .align{
   align-items: center;
