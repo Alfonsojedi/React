@@ -8,7 +8,7 @@
 
   --red: #844;
   --scarlet: #FDB;
-  --blue: #0CF;
+  --blue: #4CF;
   --grey: #DDD;
   --trans: #6663;
   --ktrans: #333A;
@@ -217,11 +217,11 @@ body{
   color: var(--ktrans);
 }
 .radius{
-  border: #44CCFF 1px solid;
+  border: var(--blue) 1px solid;
   border-radius: 1.5rem;
 }
 .radius-btn{
-  border: var(--flying) 1px solid;
+  border: var(--blue) 1px solid;
   background-color:var(--normal);
   border-radius: 50%;
   width: 1.5rem;
