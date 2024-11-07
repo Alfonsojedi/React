@@ -1,14 +1,13 @@
-//Usar este componente para reducir el App.jsx
 import { useState } from 'react'
 import PokeCard from './PokeCard'
 
-export function CardGrid ({pokemons}){
+export function CardGrid({pokemons}){
    return(
-    <div className='row px-5 pt-1'>
-        {pokemons.map(element => {
+      <div className='row px-5 pt-1'>
+         {pokemons.map(element => {
             return <PokeCard pokemon={element}></PokeCard>
-        })}
-    </div>
+         })}
+      </div>
    )
 }
 

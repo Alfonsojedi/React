@@ -5,10 +5,10 @@
   --lgray: #CCC;
   --gray: #888;
   --dgray: #666;
+  --back: #FDB;
 
   --red: #844;
-  --scarlet: #FDB;
-  --blue: #0CF;
+  --blue: #4CF;
   --grey: #DDD;
   --trans: #6663;
   --ktrans: #333A;
@@ -27,7 +27,7 @@
   --fightingc: #F86;
   --fire: #F80;
   --firec: #FC6;
-  --flying: #4CF;
+  --flying: #6CF;
   --flyingc: #CEF;
   --ghost: #408;
   --ghostc: #84C;
@@ -54,6 +54,7 @@ body{
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--back);
 }
 .align{
   align-items: center;
@@ -75,7 +76,7 @@ body{
   border-radius: .5rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  text-align:center;
+  text-align: center;
 }
 .bug{
   background-color: var(--bug);
@@ -144,7 +145,6 @@ body{
 .ground{
   background-color: var(--ground);
   color: var(--white);
-
 }
 .groundcard{
   background-color: var(--groundc);
@@ -218,11 +218,11 @@ body{
   color: var(--ktrans);
 }
 .radius{
-  border: #44CCFF 1px solid;
+  border: var(--blue) 1px solid;
   border-radius: 1.5rem;
 }
 .radius-btn{
-  border: #44CCFF 1px solid;
+  border: var(--blue) 1px solid;
   background-color:var(--normal);
   border-radius: 50%;
   width: 1.5rem;
@@ -234,13 +234,10 @@ body{
 .round{
   border-radius: 50%;
 }
-.scarlet{
-  background-color: var(--scarlet);
-}
 .minib{
   border: var(--gray) 1px solid;
   border-radius: 1rem;
   background-color: var(--lgray);
-  font-size: larger;
   color: var(--dgray);
+  font-size: larger;
 }

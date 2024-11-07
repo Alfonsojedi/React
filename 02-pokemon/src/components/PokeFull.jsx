@@ -10,34 +10,32 @@ export function PokeFull({pokemon}){
     if(!pokemon){
         return null
     }
-    let evos = ["Bulvasaur","Ivysaur","Venosaur"]
-    const pokeid= (pokemon.id>99?(pokemon.id>999?pokemon.id:"0"+pokemon.id):(pokemon.id>9?"00"+pokemon.id:"000"+pokemon.id))
+    let evos=["Bulvasaur","Ivysaur","Venosaur"]
+    const pokeid=(pokemon.id>99?(pokemon.id>999?pokemon.id:"0"+pokemon.id):(pokemon.id>9?"00"+pokemon.id:"000"+pokemon.id))
     let color1=pokemon.types[0]["type"]["name"]
-    let color2
+    let color2=color2=pokemon.types[0]["type"]["name"]
     let total=0
     for (let i=0;i<6;i++){
         total+=pokemon.stats[i]["base_stat"]
     }
     if(pokemon.types[1]){
         color2=pokemon.types[1]["type"]["name"]
-    }else{
-        color2=pokemon.types[0]["type"]["name"]
     }
     return(
-        <div className='row m-2 aling center'>
+        <div className='row m-2 align center'>
             <div className='card col p-0'>
                 <div className="card-header bg-danger">
                     <div className="row mt-1">
                         <div className="col-5">
-                            <div className="watercard radius aling center p-1">
-                                <h4 className="aligntext ">{pokemon.species.name.toUpperCase()}</h4>
-                                <img className='w-100' src={pokemon.sprites.front_default}></img>
-                                <Weighter height={pokemon.height} weight={pokemon.weight}></Weighter>
-                            </div>
                             <div className='row mt-2'>
                                 {pokemon.types.map(element => {
                                     return <Type type={element["type"]["name"]}></Type>
                                 })}
+                            </div>
+                            <div className="watercard radius align center p-1">
+                                <h4 className="aligntext">{pokemon.species.name.toUpperCase()}</h4>
+                                <img className='w-100' src={pokemon.sprites.front_default}></img>
+                                <Weighter height={pokemon.height} weight={pokemon.weight}></Weighter>
                             </div>
                         </div>
                         <div className="col-7">
@@ -72,7 +70,7 @@ export function PokeFull({pokemon}){
                         </div>
                         <div className={"radius "+color2+"card p-1 col-7 col-md-8"}>
                             <p>Descripción:</p>
-                            <p className="kindatrans p-1">{pokemon.name.toUpperCase()} should have a description here; sadly, I don't know where it's description is so don't expect this to work for now...</p>
+                            <p className="kindatrans p-1">{pokemon.name.toUpperCase()} should have a description here; sadly, I don't know where it's description is, so don't expect this to work...</p>
                             <p>Lista de movimientos:</p>
                             <ul>
                                 {pokemon.moves.map(move => {
@@ -89,9 +87,9 @@ export function PokeFull({pokemon}){
 
                         </div>
                     </div>
-                    <div className="row aling right mt-1">
+                    <div className="row align right mt-1">
                         <div className="col-3 right">
-                            <h1><b>▒▒</b></h1>      
+                            <h1><b>▒▒</b></h1>
                         </div>
                         <div className="col-5">
                             <audio controls className="bg-danger w-75 radius border">
@@ -100,7 +98,7 @@ export function PokeFull({pokemon}){
                             </audio>
                         </div>
                         <div className="col-3">
-                            <h1><b>▒▒</b></h1>      
+                            <h1><b>▒▒</b></h1>
                         </div>
                     </div>
                 </div>

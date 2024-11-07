@@ -1,23 +1,30 @@
 # Pokédex
-This proyect contains a 'working' Pokedex that uses React and Vite in order to work.
+This proyect contains a 'working' Pokédex that uses React & Vite in order to work.
 The Pokédex data is obtained through feching the information from the PokeAPI.
 
 This proyect is still a 'Work In Progress', this proyect is still getting updated and it's not yet a finished product.
 
+## Components used
+- **PokeNav**: Navigator containing every region (stotred as NavItems) in it
+  - **NavItem**: Child component that makes a link to each Pokémon region
+- **CardGrid**: Organices the cards (PokeCards) inside
+  - **PokeCard**: A card with simplified pokemon data and a sprite (image) of it. It shows its main stats, typing, height and weight
+- **PokeFull**: Component that resembles both a Nintendo 2DS and a 6th generation Pokédex
+  - **DSButton**: Component that handles the start and select buttons on the "2DS"
+
+- **Stater**: Stores the pokemon's main six stats on a column of progressbars. (Child of PokeCard & PokeFull)
+  - **ProgressBar**: Progressbar of one of the Pokemon's main stats, colored accordingly for ease of use. Child component of Stater
+- **Type**: Makes a small sign showing the pokemon's type. (Child of PokeCard & PokeFull)
+- **Weighter**: Uses a small space to put the Pokemon's height & weight. (Child of PokeCard & PokeFull)
+
 ## Author
 Made by @Alfonsojedi 
 
-## Components used
-- **PokeNav**: Navegador de la página
-  - **NavItem**:
-- **CardGrid**: Organiza las cartas
-  - **PokeCard**: Cada una de las cartas que muestran 1 Pokémon, simplificadas para facilitar su visivilidad.
-- **PokeFull**: Un componente que se asemeja a una 2DS y a una Pokédex de la era, pero con ciertas diferencias 
-- **Stater**: Set de 6 stats principales, 
-  - **ProgressBar**:
-- **Type**:
-- **Weighter**:
-
+## Clone
+- > git clone https://github.com/Alfonsojedi/React.git
+- > cd React/02-pokemon
+- > npm run dev
+- Open your browser on specified localhost.
 <!---
 # React + Vite
 

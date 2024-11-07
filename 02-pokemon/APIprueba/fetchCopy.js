@@ -5,9 +5,7 @@ async function Pokemon(url){//await only works on async functions
 }
 let urls = ["https://pokeapi.co/api/v2/pokemon/151","https://pokeapi.co/api/v2/pokemon/koraidon"]
 try{
-    urls.forEach(url => {
-        Pokemon(url)
-    });
+    urls.forEach(url => Pokemon(url));
 }catch(error){//Exception e in JavaScript
     console.error(error)
 }
