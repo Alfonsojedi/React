@@ -77,14 +77,12 @@ export function PokeFull({pokemon}){
                                     return <li key={move["move"]["name"]}>{move["move"]["name"]+" | lvl: "+move["version_group_details"][0]["level_learned_at"]+" | de: "+move["version_group_details"][0]["move_learn_method"]["name"]}</li>
                                 })}
                             </ul>
-
                         </div>
                         <div className="col-3 col-md-2">
                             <DSButton icon="+" text="start"></DSButton>
                             <DSButton icon="-" text="select"></DSButton>
                             <button type="button" className="btn btn-danger radius border">O</button>
                             <div className="ms-1 dot"></div>
-
                         </div>
                     </div>
                     <div className="row align right mt-1">
@@ -94,7 +92,7 @@ export function PokeFull({pokemon}){
                         <div className="col-5">
                             <audio controls className="bg-danger w-75 radius border">
                                 <source src={pokemon.cries.latest} type="audio/ogg"></source>
-                                Pokemon noises.
+                                Pokémon noises.
                             </audio>
                         </div>
                         <div className="col-3">

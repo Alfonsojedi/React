@@ -13,4 +13,5 @@ export function Stater({stats}){
     </div>
   )
 }
+
 export default Stater
