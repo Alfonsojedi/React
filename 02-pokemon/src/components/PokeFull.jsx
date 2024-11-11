@@ -13,7 +13,7 @@ export function PokeFull({pokemon}){
     let evos=["Bulvasaur","Ivysaur","Venosaur"]
     const pokeid=(pokemon.id>99?(pokemon.id>999?pokemon.id:"0"+pokemon.id):(pokemon.id>9?"00"+pokemon.id:"000"+pokemon.id))
     let color1=pokemon.types[0]["type"]["name"]
-    let color2=color2=pokemon.types[0]["type"]["name"]
+    let color2=pokemon.types[0]["type"]["name"]
     let total=0
     for (let i=0;i<6;i++){
         total+=pokemon.stats[i]["base_stat"]
@@ -26,8 +26,8 @@ export function PokeFull({pokemon}){
             <div className='card col p-0'>
                 <div className="card-header bg-danger">
                     <div className="row mt-1">
-                        <div className="col-5">
-                            <div className='row mt-2'>
+                        <div className="col-4">
+                            <div className='row mb-2'>
                                 {pokemon.types.map(element => {
                                     return <Type type={element["type"]["name"]}></Type>
                                 })}
@@ -38,11 +38,11 @@ export function PokeFull({pokemon}){
                                 <Weighter height={pokemon.height} weight={pokemon.weight}></Weighter>
                             </div>
                         </div>
-                        <div className="col-7">
+                        <div className="col-8">
                             <div className={"radius p-1 "+color1+"card"}>
                                 <h6>Habilidades:</h6>
                                 <ol>
-                                    {pokemon.abilities.map(element =>{
+                                    {pokemon.abilities.map(element => {
                                         return <li>{element["ability"]["name"]}</li>
                                     })}
                                 </ol>

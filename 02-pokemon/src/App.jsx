@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
 import './index.css'
 import PokeNav from './components/PokeNav'
-import Reacting from './components/Reacting'
-import PokeCard from './components/PokeCard'
 import CardGrid from './components/CardGrid'
 import PokeFull from './components/PokeFull'
+import '../utils/fn.js'
 
 async function FetchAPI(url){//await only works on async functions
   let response = await fetch(url);//use the url to get data from the API
@@ -31,13 +30,12 @@ let pokelist=[]
 try{
   const urls = await PokeRegion(1)
   pokelist = await Promise.all(urls.map(async url => await FetchAPI(url)))
-  console.log(pokelist)
 }catch(error){
   console.log(error)
 }
 
 function App() {
-  const [regiones, getRegiones] = useState(["0","1","2"])
+  const [regiones, setRegiones] = useState(["0","1","2"])
   let pokemon = pokelist[0]
   let pokemons = pokelist
   

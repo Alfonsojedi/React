@@ -12,7 +12,7 @@ export function PokeNav(){
               <a className="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             {regiones.map(region => {
-              return <NavItem region={region}></NavItem>
+              return <NavItem key={region} region={region}></NavItem>
             })}
           </ul>
         </div>
