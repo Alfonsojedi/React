@@ -9,3 +9,6 @@ Incluye:
   - (Modelo React de prueba)
 ## Autor
 @Alfonsojedi
+## Clone
+> git clone https://github.com/Alfonsojedi/React.git
+> cd React
