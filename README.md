@@ -1,6 +1,6 @@
 # React Proyectos de clase de 2º año de DAM
-Multiples proyectos de React y React Native.
-(Algunos proyectos no están completos)
+Múltiples proyectos de React y React Native.
+(Algunos proyectos no están completados)
 
 Incluye:
   - 3 en raya
@@ -10,5 +10,5 @@ Incluye:
 ## Autor
 @Alfonsojedi
 ## Clone
-> git clone https://github.com/Alfonsojedi/React.git
-> cd React
+- > git clone https://github.com/Alfonsojedi/React.git
+- > cd React
