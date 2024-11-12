@@ -12,12 +12,9 @@ export function PokeFull({pokemon}){
     }
     let evos=["Bulvasaur","Ivysaur","Venosaur"]
     const pokeid=(pokemon.id>99?(pokemon.id>999?pokemon.id:"0"+pokemon.id):(pokemon.id>9?"00"+pokemon.id:"000"+pokemon.id))
-    let color1=pokemon.types[0]["type"]["name"]
+    const color1=pokemon.types[0]["type"]["name"]
     let color2=pokemon.types[0]["type"]["name"]
-    let total=0
-    for (let i=0;i<6;i++){
-        total+=pokemon.stats[i]["base_stat"]
-    }
+    const total=pokemon.stats.reduce((total,stat) =>{return total+stat["base_stat"]},0)
     if(pokemon.types[1]){
         color2=pokemon.types[1]["type"]["name"]
     }
@@ -41,11 +38,9 @@ export function PokeFull({pokemon}){
                         <div className="col-8">
                             <div className={"radius p-1 "+color1+"card"}>
                                 <h6>Habilidades:</h6>
-                                <ol>
-                                    {pokemon.abilities.map(element => {
-                                        return <li>{element["ability"]["name"]}</li>
-                                    })}
-                                </ol>
+                                <ol>{pokemon.abilities.map(element => {
+                                    return <li key={element["ability"]["name"]}>{element["ability"]["name"]}</li>
+                                })}</ol>
                                 <Stater stats={pokemon.stats}></Stater>
                                 <p>Estadísticas totales: {total} puntos</p>
                                 <h6>Cadena evolutiva:</h6>
@@ -58,7 +53,7 @@ export function PokeFull({pokemon}){
                         </div>
                     </div>
                 </div>
-                <div className={"card-main p-1 bg-danger"}>
+                <div className="card-main p-1 bg-danger">
                     <div className="normalcard border radius col-12 col-md-9 col-xl-8 mb-2 ps-2">
                         <h4 className='card-title'>Nº{pokeid}: {pokemon.species.name.toUpperCase()}</h4>
                     </div>
@@ -72,11 +67,9 @@ export function PokeFull({pokemon}){
                             <p>Descripción:</p>
                             <p className="kindatrans p-1">{pokemon.name.toUpperCase()} should have a description here; sadly, I don't know where it's description is, so don't expect this to work...</p>
                             <p>Lista de movimientos:</p>
-                            <ul>
-                                {pokemon.moves.map(move => {
-                                    return <li key={move["move"]["name"]}>{move["move"]["name"]+" | lvl: "+move["version_group_details"][0]["level_learned_at"]+" | de: "+move["version_group_details"][0]["move_learn_method"]["name"]}</li>
-                                })}
-                            </ul>
+                            <ul>{pokemon.moves.map(move => {
+                                return <li key={move["move"]["name"]}>{move["move"]["name"]+" | lvl: "+move["version_group_details"][0]["level_learned_at"]+" | de: "+move["version_group_details"][0]["move_learn_method"]["name"]}</li>
+                            })}</ul>
                         </div>
                         <div className="col-3 col-md-2">
                             <DSButton icon="+" text="start"></DSButton>

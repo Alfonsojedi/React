@@ -10,7 +10,7 @@ export function PokeCard({key,pokemon}){
   if(pokemon.types[1]){
     color2 = pokemon.types[1]["type"]["name"]
   }
-  //let total=pokemon.stats.reduce((total,stat) =>{return total+stat["base_stat"]},0)
+  let total=pokemon.stats.reduce((total,stat) =>{return total+stat["base_stat"]},0)
   return(
     <div className='col-4 p-2'>
       <div className='card'>
@@ -28,6 +28,7 @@ export function PokeCard({key,pokemon}){
         <div className={"card-main "+color2+"card"}>
           <h5 className='card-title ps-1 pt-1'>{pokemon.name.toUpperCase()}:</h5>
           <Stater stats={pokemon.stats}></Stater>
+          <p>Total: {total}</p>
         </div>
       </div>
     </div>
