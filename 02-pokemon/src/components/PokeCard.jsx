@@ -10,7 +10,7 @@ export function PokeCard({key,pokemon}){
   if(pokemon.types[1]){
     color2 = pokemon.types[1]["type"]["name"]
   }
-  let total=pokemon.stats.reduce((total,stat) =>{return total+stat["base_stat"]},0)
+  //let total=pokemon.stats.reduce((total,stat) =>{return total+stat["base_stat"]},0)
   return(
     <div className='col-4 p-2'>
       <div className='card'>
