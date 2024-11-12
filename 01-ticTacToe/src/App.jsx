@@ -7,7 +7,7 @@ import {Square} from './components/Square.jsx'
 function App() {
   const [count, setCount] = useState(0)
   
-  return <Square/>;
+  return <Grid/>;
 
 }
 
