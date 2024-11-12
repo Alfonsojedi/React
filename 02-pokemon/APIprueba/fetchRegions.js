@@ -1,6 +1,6 @@
 async function fetchAPI(url){
     return (await fetch(url)).json();
-  }
+}
 async function PokeRegion(region){
     //Saltar paso A si tienes el número
     //region can be string and it works too
@@ -14,7 +14,6 @@ async function PokeRegion(region){
     })
     return pokeurls
 }
-
 try{
     const urls = PokeRegion("kanto")
     let pokemons = []

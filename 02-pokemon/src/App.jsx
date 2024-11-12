@@ -31,6 +31,7 @@ try{
 
 function App() {
   const [regiones, setRegiones] = useState(["Kanto","Jotho","Hoenn"])
+  //setRegiones(PokeRegion(1))
   let pokemon = pokelist[0]
   let pokemons = pokelist
   return (

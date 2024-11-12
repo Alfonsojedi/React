@@ -2,16 +2,16 @@ async function fetchAPI(url){
   return (await fetch(url)).json();
 }
 async function PokeRegion(region){
-    //Saltar paso A si tienes el número
-    //region can be string and it works too
-    let result = await fetchAPI("https://pokeapi.co/api/v2/region/"+region);//use the url to get data from the API
-    //En gen 9,10 u 11+ este code daría error
-    result = await fetchAPI(result.main_generation.url)
-    let pokeurls = [];
-    result.pokemon_species.map(pokeobj => {
-      pokeurls.push(pokeobj.url.replace('-species',''))
-    })
-    return pokeurls
+  //Saltar paso A si tienes el número
+  //region can be string and it works too
+  let result = await fetchAPI("https://pokeapi.co/api/v2/region/"+region);//use the url to get data from the API
+  //En gen 9,10 u 11+ este code daría error
+  result = await fetchAPI(result.main_generation.url)
+  let pokeurls = [];
+  result.pokemon_species.map(pokeobj => {
+    pokeurls.push(pokeobj.url.replace('-species',''))
+  })
+  return pokeurls
 }
 /*
 async function regionsFetch(){
