@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import NavItem from './NavItem'
 
-export function PokeNav(){
-  const regiones = ["Kanto","2","Prueba"];
+export function PokeNav({regiones}){
   return(
     <nav className="navbar navbar-expand-sm bg-danger">
       <div className="container-fluid">

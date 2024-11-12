@@ -3,25 +3,20 @@ import './index.css'
 import PokeNav from './components/PokeNav'
 import CardGrid from './components/CardGrid'
 import PokeFull from './components/PokeFull'
-import '../utils/fn.js'
+import './utils/fn.js'
 
-async function FetchAPI(url){//await only works on async functions
-  let response = await fetch(url);//use the url to get data from the API
-  let result = await response.json()//Convert the data into usable JSON
-  return result
+async function fetchAPI(url){
+  return (await fetch(url)).json();
 }
 async function PokeRegion(region){
   //Saltar paso A si tienes el número
   //region can be string and it works too
-  let response = await fetch("https://pokeapi.co/api/v2/region/"+region);//use the url to get data from the API
-  let result = await response.json()
-
+  let result = await fetchAPI("https://pokeapi.co/api/v2/region/"+region);//use the url to get data from the API
   //En gen 9,10 u 11+ este code daría error
-  response = await fetch(result.main_generation.url)
-  result = await response.json()
+  result = await fetchAPI(result.main_generation.url)
   let pokeurls = [];
-  result.pokemon_species.map(pokeobject => {
-    pokeurls.push(pokeobject.url.replace('-species',''))
+  result.pokemon_species.map(url => {
+    pokeurls.push(url.url.replace('-species',''))
   })
   return pokeurls
 }
@@ -35,14 +30,13 @@ try{
 }
 
 function App() {
-  const [regiones, setRegiones] = useState(["0","1","2"])
+  const [regiones, setRegiones] = useState(["Kanto","Jotho","Hoenn"])
   let pokemon = pokelist[0]
   let pokemons = pokelist
-  
   return (
     <>
       <header>
-        <PokeNav></PokeNav>
+        <PokeNav regiones={regiones}></PokeNav>
       </header>
       <main>
         <PokeFull pokemon={pokemon}></PokeFull>
