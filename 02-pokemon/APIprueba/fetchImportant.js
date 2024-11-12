@@ -1,29 +1,16 @@
+async function fetchAPI(url){
+    return (await fetch(url)).json();
+}
 async function Pokemon(url){//await only works on async functions
-    let response = await fetch(url);
-    let result = await response.json()
-    //console.log(result)
-    PokemonImportant(result)
+    PokemonImportant(await FetchAPI(url))
 }
-function PokemonImportant(result){
-    console.log(result["name"])
+function PokemonImportant(poke){
+    console.log(poke["name"])
     //const stats=["Hp","Atk","Dfs","SpAtk","SpDfs","Spd"]
-    for (let i=0; i<6; i++) {
-        console.log(result["stats"][i]["base_stat"])    
-    }
-
-    result["types"].forEach(element => {
-        console.log(element["type"]["name"])
-    });
-}
-function PokemonUsed(result){
-    //Sacar todos los datos que quiera mostrar al usuario
-    console.log(result["name"])
-    //const stats=["Hp","Atk","Dfs","SpAtk","SpDfs","Spd"]
-    for (let i=0; i<6; i++) {
-        console.log(result["stats"][i]["base_stat"])    
-    }
-
-    result["types"].forEach(element => {
+    poke.stats.forEach(stat =>{
+        console.log(stat.base_stat)
+    })
+    poke["types"].forEach(element => {
         console.log(element["type"]["name"])
     });
 }
