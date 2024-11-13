@@ -1,11 +1,10 @@
 # React Proyectos de clase de 2º año de DAM
 Múltiples proyectos de React y React Native.
 (Algunos proyectos no están completados)
-
-Incluye:
+## Incluye
   - 3 en raya
   - Pokédex
-  - Tetris (React Native)
+  - Tetris(React Native)
   - (Modelo React de prueba)
 ## Autor
 @Alfonsojedi
