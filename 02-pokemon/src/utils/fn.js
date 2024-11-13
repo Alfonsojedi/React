@@ -13,7 +13,7 @@ async function PokeRegion(region){
   })
   return pokeurls
 }
-/*
+//Unused
 async function regionsFetch(){
   let regions = await fetchAPI("https://pokeapi.co/api/v2/region");
   let regiones = [];
@@ -37,4 +37,3 @@ function evoMaker(cadena,evos){
   cadena.evolves_to.map(evo => {evos[cadena.species.name]=evoMaker(evo,{value})})
   return evos;
 }
-*/

@@ -14,7 +14,6 @@ export function PokeFull({pokemon}){
     const pokeid=(pokemon.id>99?(pokemon.id>999?pokemon.id:"0"+pokemon.id):(pokemon.id>9?"00"+pokemon.id:"000"+pokemon.id))
     const color1=pokemon.types[0]["type"]["name"]
     let color2=pokemon.types[0]["type"]["name"]
-    const total=pokemon.stats.reduce((total,stat) =>{return total+stat["base_stat"]},0)
     if(pokemon.types[1]){
         color2=pokemon.types[1]["type"]["name"]
     }
@@ -42,7 +41,6 @@ export function PokeFull({pokemon}){
                                     return <li key={element["ability"]["name"]}>{element["ability"]["name"]}</li>
                                 })}</ol>
                                 <Stater stats={pokemon.stats}></Stater>
-                                <p>Estadísticas totales: {total} puntos</p>
                                 <h6>Cadena evolutiva:</h6>
                                 <p className="kindatrans">{evos.map(evo => {
                                     return <span className="ps-2 pe-2">{evo}</span>

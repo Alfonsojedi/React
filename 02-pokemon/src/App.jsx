@@ -20,20 +20,22 @@ async function PokeRegion(region){
   })
   return pokeurls
 }
-
-let pokelist=[]
-try{
-  const urls = await PokeRegion(1)
-  pokelist = await Promise.all(urls.map(async url => await FetchAPI(url)))
-}catch(error){
-  console.log(error)
+async function start(){
+  try{
+    const urls = await PokeRegion(1)
+    pokelist = await Promise.all(urls.map(async url => await FetchAPI(url)))
+    return pokelist
+  }catch(error){
+    console.log(error)
+  }
 }
+pokes = start()
 
 function App() {
   const [regiones, setRegiones] = useState(["Kanto","Jotho","Hoenn"])
   //setRegiones(PokeRegion(1))
-  let pokemon = pokelist[0]
-  let pokemons = pokelist
+  let pokemons = pokes
+  let pokemon = pokes[0]
   return (
     <>
       <header>
