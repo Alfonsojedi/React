@@ -3,8 +3,8 @@ import './index.css'
 import PokeNav from './components/PokeNav'
 import CardGrid from './components/CardGrid'
 import PokeFull from './components/PokeFull'
-import './utils/fn.js'
-
+import {fetchAPI,pokeRegion} from './utils/fn.js'
+/*
 async function fetchAPI(url){
   return (await fetch(url)).json();
 }
@@ -20,20 +20,21 @@ async function PokeRegion(region){
   })
   return pokeurls
 }
+*/
 async function start(){
   try{
-    const urls = await PokeRegion(1)
-    pokelist = await Promise.all(urls.map(async url => await FetchAPI(url)))
+    const urls = await pokeRegion(1)
+    pokelist = await Promise.all(urls.map(async url => await fetchAPI(url)))
     return pokelist
   }catch(error){
     console.log(error)
   }
 }
-pokes = start()
+let pokes = start()
 
 function App() {
   const [regiones, setRegiones] = useState(["Kanto","Jotho","Hoenn"])
-  //setRegiones(PokeRegion(1))
+  //setRegiones(pokeRegion(1))
   let pokemons = pokes
   let pokemon = pokes[0]
   return (

@@ -1,7 +1,7 @@
 async function fetchAPI(url){
   return (await fetch(url)).json();
 }
-async function PokeRegion(region){
+async function pokeRegion(region){
   //Saltar paso A si tienes el número
   //region can be string and it works too
   let result = await fetchAPI("https://pokeapi.co/api/v2/region/"+region);//use the url to get data from the API
