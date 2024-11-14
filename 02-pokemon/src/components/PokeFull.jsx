@@ -36,7 +36,7 @@ export function PokeFull({pokemon}){
                             <Stater stats={pokemon.stats}></Stater>
                             <h6>Cadena evolutiva:</h6>
                             <p className="kindatrans">{evos.map(evo => {
-                                return <span className="ps-2 pe-2">{evo}</span>
+                                return <span key={evo} className="ps-2 pe-2">{evo}</span>
                             })}</p>
                             <h6>Zona de captura:</h6>
                             <p className="kindatrans">{pokemon.location_area_encounters}</p>
@@ -44,8 +44,8 @@ export function PokeFull({pokemon}){
                     </div>
                 </div>
             </div>
-            <div className="card-main p-1 bg-danger">
-                <div className="normalcard border radius col-12 col-md-9 col-xl-8 mb-2 ps-2">
+            <div className="card-main row center bg-danger p-2">
+                <div className="normalcard border radius col-12 col-md-10 mb-2 ps-1">
                     <h4 className='card-title'>Nº{pokeid}: {pokemon.species.name.toUpperCase()}</h4>
                 </div>
                 <div className="row ps-3 right align">
@@ -69,9 +69,9 @@ export function PokeFull({pokemon}){
                         <div className="ms-1 dot"></div>
                     </div>
                 </div>
-                <div className="row mt-1">
+                <div className="row align center mt-1">
                     <div className="col-2 align">
-                        <h1><b>▒▒POII</b></h1>
+                        <h1><b>▒▒</b></h1>
                     </div>
                     <div className="col-8">
                         <audio controls className="bg-danger w-75 radius border">

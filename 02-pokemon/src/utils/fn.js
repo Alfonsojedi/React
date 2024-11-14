@@ -1,7 +1,7 @@
-async function fetchAPI(url){
+export async function fetchAPI(url){
   return (await fetch(url)).json();
 }
-async function pokeRegion(region){
+export async function pokeRegion(region){
   //Saltar paso A si tienes el número
   //region can be string and it works too
   let result = await fetchAPI("https://pokeapi.co/api/v2/region/"+region);//use the url to get data from the API
@@ -12,6 +12,15 @@ async function pokeRegion(region){
     pokeurls.push(pokeobj.url.replace('-species',''))
   })
   return pokeurls
+}
+export async function start() {
+  try{
+    const urls = await pokeRegion(1)
+    let pokelist = await Promise.all(urls.map(async url => await fetchAPI(url)))
+    return pokelist
+  }catch(error){
+    console.log(error)
+  }
 }
 //Unused
 async function regionsFetch(){
