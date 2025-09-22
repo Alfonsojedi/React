@@ -4,6 +4,7 @@ import Type from "./Type";
 import Weighter from "./Weighter";
 import DSButton from "./DSButton";
 
+//Arreglar colores de la 4DS
 export function PokeFull({pokemon}){
     //Checkear en un bucle si pokemon.stats[1] existe, si no, crear otro return
     //fetch(v2/evolution-chain/{pokemonid})
